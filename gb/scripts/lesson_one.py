@@ -73,8 +73,6 @@ def is_happy_ticket(ticket_number):
 # *Пример:*
 #
 # 3 2 4 -> yes
-# xxx
-# xxx
 # 3 2 1 -> no
 
 def is_possible_for_chocolate(rows, columns, bars):
@@ -83,7 +81,6 @@ def is_possible_for_chocolate(rows, columns, bars):
         whole_variants.add((row, columns))
     for column in range(1, columns):
         whole_variants.add((rows, column))
-    print(whole_variants)
     for r, c in whole_variants:
         if r * c == bars:
             return True
