@@ -6,7 +6,6 @@
 
 
 def sum_of_numbers(numbers):
-    print("n", numbers)
     try:
         return sum_of_int_number(int(numbers))
     except Exception as ex:
