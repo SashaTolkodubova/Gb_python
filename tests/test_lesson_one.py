@@ -1,0 +1,24 @@
+import gb.scripts.lesson_one as lesson_one
+
+
+def test_sum_of_numbers():
+    assert lesson_one.sum_of_numbers(100) == 1
+    assert lesson_one.sum_of_numbers(123) == 6
+    assert lesson_one.sum_of_numbers('100') == 1
+    assert lesson_one.sum_of_numbers('123') == 6
+
+
+def test_make_paper_cranes():
+    assert lesson_one.make_paper_cranes(6) == (1, 4, 1)
+    assert lesson_one.make_paper_cranes(24) == (4, 16, 4)
+    assert lesson_one.make_paper_cranes(60) == (10, 40, 10)
+
+
+def test_is_happy_ticket():
+    assert lesson_one.is_happy_ticket(385916)
+    assert not lesson_one.is_happy_ticket(123456)
+
+
+def test_is_possible_for_chocolate():
+    assert lesson_one.is_possible_for_chocolate(3, 2, 4)
+    assert not lesson_one.is_possible_for_chocolate(3, 2, 1)
