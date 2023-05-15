@@ -1,4 +1,5 @@
 import gb.scripts.lesson_one as lesson_one
+import gb.scripts.lesson_four as lesson_four
 
 
 def test_sum_of_numbers():
@@ -22,3 +23,14 @@ def test_is_happy_ticket():
 def test_is_possible_for_chocolate():
     assert lesson_one.is_possible_for_chocolate(3, 2, 4)
     assert not lesson_one.is_possible_for_chocolate(3, 2, 1)
+
+
+def test_get_uniq_numbers():
+    ar_1 = [9, 2, 6, 0, 3, 9]
+    ar_2 = [4, 2, 0, 1, 9, 5, 4]
+    assert lesson_four.get_uniq_numbers(ar_1, ar_2) == [0, 2, 9]
+
+
+def test_count_berry():
+    bushs = [43, 2, 11, 23, 44]
+    assert lesson_four.count_berry(bushs) == 110
