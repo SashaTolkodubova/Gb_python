@@ -1,5 +1,6 @@
 import gb.scripts.lesson_one as lesson_one
 import gb.scripts.lesson_four as lesson_four
+import gb.scripts.lesson_five as lesson_five
 
 
 def test_sum_of_numbers():
@@ -34,3 +35,12 @@ def test_get_uniq_numbers():
 def test_count_berry():
     bushs = [43, 2, 11, 23, 44]
     assert lesson_four.count_berry(bushs) == 110
+
+
+def test_recursin_pow():
+    assert lesson_five.recursin_pow(3, 5) == 243
+    assert lesson_five.recursin_pow(2, 3) == 8
+
+
+def test_reqursive_summ():
+    assert lesson_five.reqursive_summ(2, 2) == 4
