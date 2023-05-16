@@ -1,6 +1,7 @@
 import gb.scripts.lesson_one as lesson_one
 import gb.scripts.lesson_four as lesson_four
 import gb.scripts.lesson_five as lesson_five
+import gb.scripts.lesson_six as lesson_six
 
 
 def test_sum_of_numbers():
@@ -44,3 +45,12 @@ def test_recursin_pow():
 
 def test_reqursive_summ():
     assert lesson_five.reqursive_summ(2, 2) == 4
+
+
+def test_arithmetic_progression():
+    assert lesson_six.arithmetic_progression(1, 2, 10) ==\
+           [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+def test_indexes_range():
+    arr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    assert lesson_six.indexes_range(arr, 2, 5) == [2, 3, 4, 5]
