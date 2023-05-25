@@ -2,6 +2,7 @@ import gb.scripts.lesson_one as lesson_one
 import gb.scripts.lesson_four as lesson_four
 import gb.scripts.lesson_five as lesson_five
 import gb.scripts.lesson_six as lesson_six
+import gb.scripts.lesson_seven as lesson_seven
 
 
 def test_sum_of_numbers():
@@ -54,3 +55,24 @@ def test_arithmetic_progression():
 def test_indexes_range():
     arr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     assert lesson_six.indexes_range(arr, 2, 5) == [2, 3, 4, 5]
+
+
+def test_check_rhythm():
+    song_1 = 'пара-ра-рам рам-пам-папам па-ра-па-да'
+    song_2 = 'пра-ра-рам рам-пам-папам па-ра-па-да'
+    assert lesson_seven.check_rhythm(song_1) == "Парам пам - пам"
+    assert lesson_seven.check_rhythm(song_2) == "Пам парам"
+
+
+def test_print_operation_table():
+    result_1 = [[1, 2, 3, 4, 5, 6],
+                [2, 4, 6, 8, 10, 12],
+                [3, 6, 9, 12, 15, 18],
+                [4, 8, 12, 16, 20, 24],
+                [5, 10, 15, 20, 25, 30],
+                [6, 12, 18, 24, 30, 36]]
+    result_2 = [[1, 2],
+                [2, 4]]
+
+    assert lesson_seven.print_operation_table(lambda x, y: x * y) == result_1
+    assert lesson_seven.print_operation_table(lambda x, y: x * y, 2, 2) == result_2
